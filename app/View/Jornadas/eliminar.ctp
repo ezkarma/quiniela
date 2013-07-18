@@ -1,0 +1,1 @@
+<center><p><b>¿Esta seguro que desea eliminar la Jornada?</b></p></center>
