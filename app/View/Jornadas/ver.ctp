@@ -1,6 +1,6 @@
 <?php 
 
-echo $jornada['Jornada']['nombre'];
+echo 'Jornada: '.$jornada['Jornada']['nombre'];
 
 echo '<br>';
 ?>
@@ -10,49 +10,17 @@ echo '<br>';
 <th>Visitante </th>
 </tr>
 
-<tr>
-	<td >
-	<?php
-	echo $jornada['Jornada']['l1'];
-	?>
-	</td>
-
-	<td>
-	<?php
-	echo $jornada['Jornada']['v1'];
-	?>
-	</td>
-</tr>
-
-<tr>
-	<td >
-	<?php
-	echo $jornada['Jornada']['l2'];
-	?>
-	</td>
-
-	<td>
-	<?php
-	echo $jornada['Jornada']['v2'];
-	?>
-	</td>
-</tr>
-
-<tr>
-	<td >
-	<?php
-	echo $jornada['Jornada']['l3'];
-	?>
-	</td>
-
-	<td>
-	<?php
-	echo $jornada['Jornada']['v3'];
-	?>
-	</td>
-</tr>
+<?php
+for($con=1;$con<10;$con++){
+echo '<tr><td>';
+echo $jornada['Jornada']['l'.$con];
+echo '</td><td> vs </td><td>';
+echo $jornada['Jornada']['v'.$con];
+echo '</td></tr>';
+}
+?>
 
 </table>
 <?php
-echo $this->Html->link('Back', array('action'=>'index'));
+echo $this->Html->link('Regresar', array('action'=>'index'));
 ?>
